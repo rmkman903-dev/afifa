@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-neon-cyan: #00f0ff;
+    --color-neon-purple: #8b5cf6;
+    --color-neon-pink: #ec4899;
+    --color-dark-void: #030014;
+    --color-glass: rgba(13, 12, 34, 0.65);
+    --color-glass-border: rgba(139, 92, 246, 0.2);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    background-color: #030014;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Custom Modern Cyber Scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #030014;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00f0ff 0%, #8b5cf6 100%);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #38bdf8 0%, #a855f7 100%);
+  }
+}
+
+/* Futuristic Background Cyber Grid */
+.cyber-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+}
+
+.cyber-radial-overlay {
+  background: radial-gradient(circle at 50% 20%, rgba(139, 92, 246, 0.15), transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0, 240, 255, 0.1), transparent 50%);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(11, 10, 28, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-glow {
+  background: rgba(14, 12, 38, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(0, 240, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(15, 14, 40, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.25), 0 0 1px 1px rgba(0, 240, 255, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Glow Texts and Highlights */
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+
+.gradient-text-cyber {
+  background: linear-gradient(135deg, #ffffff 20%, #f1f5f9 45%, #38bdf8 80%, #818cf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-platinum {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 60%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Pulsing Badge */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.4), 0 0 15px rgba(0, 240, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.8), 0 0 30px rgba(0, 240, 255, 0.4);
+  }
+}
+
+.neon-pulse {
+  animation: neonPulse 2.5s infinite;
+}
+
+/* 3D Canvas Container */
+.canvas-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Accessible reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
