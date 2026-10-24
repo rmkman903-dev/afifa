@@ -65,7 +65,7 @@ export default function About() {
                 <img
                   src={personalData.avatarPlaceholder}
                   alt={personalData.name}
-                  className="w-full h-full object-cover object-center filter grayscale contrast-125 group-hover:scale-105 group-hover:filter-none transition-all duration-700 opacity-90"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-700"
                 />
                 {/* Holographic Scanline Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/10 to-transparent bg-[length:100%_4px] pointer-events-none opacity-60"></div>

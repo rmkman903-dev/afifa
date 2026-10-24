@@ -7,6 +7,8 @@
  * skills, and achievements by editing this file.
  */
 
+import profileImg from '../assets/profile.jpg'
+
 export const personalData = {
   name: "Afifa Tazeen",
   initials: "AT",
@@ -26,7 +28,7 @@ export const personalData = {
   github: "https://github.com", // Replace with your GitHub handle
   status: "Available for Research & Internships",
   resumeUrl: "#resume", // Link to your resume PDF or hosted link
-  avatarPlaceholder: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800", // Futuristic profile placeholder
+  avatarPlaceholder: profileImg, // Afifa Tazeen profile photo
 };
 
 export const careerVision = {
